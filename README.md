@@ -3,3 +3,4 @@ This is a simple adder using a potentiometer to select a number from 0 to 9 and 
 
 The pinout is as displayed:
 [simple adder.pdf](https://github.com/user-attachments/files/16714078/simple.adder.pdf)
+![simple adder](https://github.com/user-attachments/assets/b559c3da-e294-4bfb-b9b8-2e6d6b026099)
