@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int analogPin = A5;
-int buttonPin = 0;
+int buttonPin = 6;
 
 int buttonState = 0; 
 int state2 = 0;
