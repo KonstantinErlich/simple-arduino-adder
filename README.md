@@ -7,3 +7,6 @@ The schematic is as displayed:
 Simulation in TinkerCad: https://www.tinkercad.com/things/5PV9tdDRPK9-simple-adder?sharecode=wVF71bXPJZAH_9pPVP-u9SgEkWzPu1Y0uRfeoILn5Hg
 
 ![simple adder](https://github.com/user-attachments/assets/b559c3da-e294-4bfb-b9b8-2e6d6b026099)
+
+https://github.com/user-attachments/assets/465864d1-06d7-49d3-9766-a0020f07e667
+
