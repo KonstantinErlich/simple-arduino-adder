@@ -61,20 +61,7 @@ void DisplayEqual() {
   digitalWrite(9, HIGH);
 
 }
-int ConvertToDec(int val){
-  //convert pin value into a decimal from 0 to 9
-  if (val < 103) { d_2 = 0;}
-  if (val > 102 and val < 206) { d_2 = 1;}
-  if (val > 205 and val < 308) { d_2 = 2;}
-  if (val > 307 and val < 411) { d_2 = 3;}
-  if (val > 410 and val < 513) { d_2 = 4;}
-  if (val > 512 and val < 615) { d_2 = 5;}
-  if (val > 614 and val < 718) { d_2 = 6;}
-  if (val > 717 and val < 820) { d_2 = 7;}
-  if (val > 819 and val < 922) { d_2 = 8;}
-  if (val > 921) { d_2 = 9;}
-  return d_2;
-}
+
 
 void CalculateResult(){
   result = a + b;
@@ -92,7 +79,6 @@ void setup() {
 }
 
 
-
 void loop() {
 buttonState = digitalRead(buttonPin);
 if (buttonState == HIGH) {
@@ -105,7 +91,7 @@ if (buttonState == HIGH) {
 if (state < 3) {
 
   val = analogRead(analogPin); // read the input pin value
-  d = ConvertToDec(val);  
+  d = map(val,0,1023,0,9);  
   pins();
   if (state == 1) {a = d;}
   else b = d;
@@ -138,7 +124,6 @@ if (state ==3) {
 
 delay(10);
 }
-
 
 
 
