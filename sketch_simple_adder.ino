@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int analogPin = A5;
-int buttonPin = 6;
+int buttonPin = 13;
 
 int buttonState = 0; 
 int state2 = 0;
@@ -28,37 +28,37 @@ int state = 1;
 
 void pins(){
   //controls LED depending on decimal value
-  if (d < 5 or d > 6) {digitalWrite(13, HIGH);}
-  else digitalWrite(13, LOW);
+  if (d < 5 or d > 6) {digitalWrite(6, HIGH);}
+  else digitalWrite(6, LOW);
 
-  if (d == 0 or d == 2 or d == 3 or d ==5 or d==6 or d==7 or d==8 or d==9 ) {digitalWrite(12, HIGH);}
+  if (d == 0 or d == 2 or d == 3 or d ==5 or d==6 or d==7 or d==8 or d==9 ) {digitalWrite(7, HIGH);}
+    else digitalWrite(7, LOW);
+
+  if (d == 0 or d == 1 or d == 3 or d ==4 or d==5 or d==6 or d==7 or d==8 or d==9 ) {digitalWrite(12, HIGH);}
     else digitalWrite(12, LOW);
 
-  if (d == 0 or d == 1 or d == 3 or d ==4 or d==5 or d==6 or d==7 or d==8 or d==9 ) {digitalWrite(11, HIGH);}
+  if (d == 0 or d == 2 or d == 3 or d ==5 or d==6 or d==8 or d==9 ) {digitalWrite(11, HIGH);}
     else digitalWrite(11, LOW);
 
-  if (d == 0 or d == 2 or d == 3 or d ==5 or d==6 or d==8 or d==9 ) {digitalWrite(10, HIGH);}
+  if (d == 0 or d == 2 or d==6 or d==8) {digitalWrite(10, HIGH);}
     else digitalWrite(10, LOW);
-
-  if (d == 0 or d == 2 or d==6 or d==8) {digitalWrite(9, HIGH);}
-    else digitalWrite(9, LOW);
   
   if (d == 0 or d == 4 or d == 5 or d ==6 or d==8 or d==9 ) {digitalWrite(8, HIGH);}
     else digitalWrite(8, LOW);
 
-  if (d == 2 or d == 3 or d==4 or d==5 or d==6 or d==8 or d==9 ) {digitalWrite(7, HIGH);}
-    else digitalWrite(7, LOW);
+  if (d == 2 or d == 3 or d==4 or d==5 or d==6 or d==8 or d==9 ) {digitalWrite(9, HIGH);}
+    else digitalWrite(9, LOW);
 }
 
 void AllPinsLow(){
-    for (int j = 13; j > 6; j--) {
+    for (int j = 12; j > 5; j--) {
     digitalWrite(j, LOW);
   }
 }
 void DisplayEqual() {
   AllPinsLow();
-  digitalWrite(12, HIGH);
   digitalWrite(7, HIGH);
+  digitalWrite(9, HIGH);
 
 }
 int ConvertToDec(int val){
@@ -85,7 +85,7 @@ void CalculateResult(){
 
 void setup() {
   Serial.begin(9600);
-  for (int i = 13; i>6; i--){
+  for (int i = 12; i>5; i--){
     pinMode(i, OUTPUT);
   }
   pinMode(buttonPin, INPUT);
@@ -138,6 +138,7 @@ if (state ==3) {
 
 delay(10);
 }
+
 
 
 
